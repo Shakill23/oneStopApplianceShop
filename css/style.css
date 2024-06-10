@@ -19,6 +19,13 @@
     }
 }
 
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Oswald:wght@200..700&display=swap');
+
+body {
+    font-family: "Oswald", sans-serif;
+  }
+
 
 
 .card {
@@ -68,3 +75,4 @@ img {
 :is(body) {
     grid-template-rows: auto minmax(100dvh, 100%) auto;
 }
+
