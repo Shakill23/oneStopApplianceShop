@@ -16,13 +16,13 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Oswald:wght@200..700&display=swap"
-          rel="stylesheet"
-        />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom's styling -->
     <link rel="stylesheet" href="../css/style.css" />
     <title>Contact</title>
@@ -32,11 +32,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
-          <img
-            src="https://shakill23.github.io/"
-            alt="logo"
-            loading="lazy"
-          />
+          <img src="https://shakill23.github.io/" alt="logo" loading="lazy" />
         </a>
         <button
           class="navbar-toggler"
@@ -84,8 +80,8 @@
     <footer class="container-fluid">
       <div class="row">
         <p class="lead">
-          Copyright &copy;
-          <span currentYear></span>
+            Copyright &copy;
+          <span currentYear></span> One-Stop Appliance Shop
         </p>
       </div>
     </footer>
@@ -97,6 +93,10 @@
       crossorigin="anonymous"
     ></script>
     <!-- Custom's script -->
-    <script></script>
+    <script>
+      // year
+      document.querySelector("[currentYear]").textContent =
+        new Date().getUTCFullYear();
+    </script>
   </body>
 </html>
