@@ -12,43 +12,67 @@ let products =
                 [
                     {
                         id: 1,
-                        productName: "Dell-Latitude",
-                        category: "Laptop",
-                        description: "Dell Latitude E5450 i3 5th GEN 1 for business. RAM 8GB, HDD 1TB",
-                        amount: 20000.89,
-                        img_url: "https://i.postimg.cc/65tcMqdc/Dell-Latitude-E5450-i3-5th-GEN-1-for-business-10000.jpg"
+                        productName: "Smart Light",
+                        category: "Miscellaneous Appliance",
+                        description: "BNETA IoT Smart WiFi LED Bulb Plus",
+                        amount: 179.00,
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
                     },
                     {
                         id: 2,
-                        productName: "Todo App",
-                        category: "Application",
-                        description: "Allow you to create, edit, delete, task including sorting tasks by ascending",
-                        amount: 30000.89,
-                        img_url: "https://codjoelmayer.github.io/allImages/images/todoapp.png"
+                        productName: "Air Fryer",
+                        category: "Kitchen Appliance",
+                        description: "Airfryer 3000 Series XL 13-in-1 cooking functions",
+                        amount: 2199.89,
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
                     },
                     {
                         id: 3,
-                        productName: "Python Programming",
-                        category: "Book",
-                        description: "Python Programming for Beginners",
-                        amount: 990.99,
-                        img_url: "https://i.postimg.cc/rFcbKX5p/Python-Programming-for-Beginners-cover.jpg"
+                        productName: "Speaker",
+                        category: "Entertainment Appliance",
+                        description: "JBL Flip 6 Portable Waterproof Bluetooth Speaker",
+                        amount: 2399,
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
                     },
                     {
                         id: 4,
-                        productName: "C++",
-                        category: "Book",
-                        description: "Mastering C++ Programming",
-                        amount: 1000,
-                        img_url: "https://i.postimg.cc/Ss9zrpfT/Mastering-C-Programming.jpg"
+                        productName: "Coffee Maker",
+                        category: "Kitchen Appliance",
+                        description: "Famiworths Single Serve Coffee Maker for K Cup & Ground Coffee, With Bold Brew, 6 to 14 oz",
+                        amount: 747.89,
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
                     },
                     {
                         id: 5,
-                        productName: "HP Elite",
-                        category: "Laptop",
-                        description: "HP Elite Book Intel Core i5 1135G7 SSD 256GB  RAM 8GB",
-                        amount: 15000,
-                        img_url: "https://i.postimg.cc/7Y83v1PB/HPElite-Book-Intel-Core-i5-1135-G7-256-GBSSD-8-GB.png"
+                        productName: "Smart TV",
+                        category: "Entertainment Appliance",
+                        description: "Samsung 55\" CU7010 4K Smart UHD TV with Smooth Motion Xcelerator",
+                        amount: 8399,
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                    },
+                    {
+                        id: 6,
+                        productName: "Electric Grill",
+                        category: "Kitchen Appliance",
+                        description: "Black & Decker 2000W Family Health Grill, Black/Silver | CG2000-B5",
+                        amount: 1679,
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                    },
+                    {
+                        id: 7,
+                        productName: "Milex Bread Master",
+                        category: "Kitchen Appliance",
+                        description: "Bake Fresh Homemade Bread Effortlessly with the Milex Bread Master!",
+                        amount: 2299.95,
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                    },
+                    {
+                        id: 8,
+                        productName: "SNOMASTER 15KG AUTOMATIC ICE MAKER",
+                        category: "Miscellaneous Appliance",
+                        description: "Space Saving Option That Fits Anywhere. Measuring 414 mm tall and 360 mm wide and weighing 15 kg",
+                        amount: 3239.99,
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
                     }
                 ]
             )
