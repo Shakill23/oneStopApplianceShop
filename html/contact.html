@@ -6,7 +6,7 @@
     <!-- Favicon -->
     <link
       rel="shortcut icon"
-      href="https://shakill23.github.io/"
+      href="https://shakill23.github.io/allImages/images/sdLogo.png"
       type="image/x-icon"
     />
     <!-- Bootstrap's styling -->
@@ -16,13 +16,13 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Oswald:wght@200..700&display=swap"
-          rel="stylesheet"
-        />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom's styling -->
     <link rel="stylesheet" href="../css/style.css" />
     <title>Contact</title>
@@ -32,11 +32,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
-          <img
-            src="https://shakill23.github.io/"
-            alt="logo"
-            loading="lazy"
-          />
+          <img src="https://shakill23.github.io/allImages/images/sdLogo.png" alt="logo" loading="lazy" />
         </a>
         <button
           class="navbar-toggler"
@@ -85,7 +81,7 @@
       <div class="row">
         <p class="lead">
           Copyright &copy;
-          <span currentYear></span>
+          <span year></span>
         </p>
       </div>
     </footer>
@@ -97,6 +93,18 @@
       crossorigin="anonymous"
     ></script>
     <!-- Custom's script -->
-    <script></script>
+    <script>
+      // year
+      document.querySelector("[year]").textContent =
+        new Date().getUTCFullYear();
+
+      window.onload = () => {
+        document.querySelector("[counter]").textContent = JSON.parse(
+          localStorage.getItem("checkout")
+        )
+          ? JSON.parse(localStorage.getItem("checkout")).length
+          : 0;
+      };
+    </script>
   </body>
 </html>
