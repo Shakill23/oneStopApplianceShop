@@ -16,7 +16,7 @@ let products =
                         category: "Miscellaneous Appliance",
                         description: "BNETA IoT Smart WiFi LED Bulb Plus",
                         amount: 179.00,
-                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                        img_url: "https://shakill23.github.io/allImages/images/smartLight1.webp"
                     },
                     {
                         id: 2,
@@ -24,7 +24,7 @@ let products =
                         category: "Kitchen Appliance",
                         description: "Airfryer 3000 Series XL 13-in-1 cooking functions",
                         amount: 2199.89,
-                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                        img_url: "https://shakill23.github.io/allImages/images/airFryer1.webp"
                     },
                     {
                         id: 3,
@@ -32,7 +32,7 @@ let products =
                         category: "Entertainment Appliance",
                         description: "JBL Flip 6 Portable Waterproof Bluetooth Speaker",
                         amount: 2399,
-                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                        img_url: "https://shakill23.github.io/allImages/images/speaker1.webp"
                     },
                     {
                         id: 4,
@@ -40,7 +40,7 @@ let products =
                         category: "Kitchen Appliance",
                         description: "Famiworths Single Serve Coffee Maker for K Cup & Ground Coffee, With Bold Brew, 6 to 14 oz",
                         amount: 747.89,
-                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                        img_url: "https://shakill23.github.io/allImages/images/coffeeMaker1.jpg"
                     },
                     {
                         id: 5,
@@ -48,7 +48,7 @@ let products =
                         category: "Entertainment Appliance",
                         description: "Samsung 55\" CU7010 4K Smart UHD TV with Smooth Motion Xcelerator",
                         amount: 8399,
-                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                        img_url: "https://shakill23.github.io/allImages/images/tv1.webp"
                     },
                     {
                         id: 6,
@@ -56,7 +56,7 @@ let products =
                         category: "Kitchen Appliance",
                         description: "Black & Decker 2000W Family Health Grill, Black/Silver | CG2000-B5",
                         amount: 1679,
-                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                        img_url: "https://shakill23.github.io/allImages/images/grill1.webp"
                     },
                     {
                         id: 7,
@@ -64,7 +64,7 @@ let products =
                         category: "Kitchen Appliance",
                         description: "Bake Fresh Homemade Bread Effortlessly with the Milex Bread Master!",
                         amount: 2299.95,
-                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                        img_url: "https://shakill23.github.io/allImages/images/breadMaker1.webp"
                     },
                     {
                         id: 8,
@@ -72,7 +72,7 @@ let products =
                         category: "Miscellaneous Appliance",
                         description: "Space Saving Option That Fits Anywhere. Measuring 414 mm tall and 360 mm wide and weighing 15 kg",
                         amount: 3239.99,
-                        img_url: "https://shakill23.github.io/allImages/images/airFryer.webp"
+                        img_url: "https://shakill23.github.io/allImages/images/iceMaker1.webp"
                     }
                 ]
             )
