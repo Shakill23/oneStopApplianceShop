@@ -32,7 +32,11 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
-          <img src="https://shakill23.github.io/allImages/images/sdLogo.png" alt="logo" loading="lazy" />
+          <img
+            src="https://shakill23.github.io/allImages/images/sdLogo.png"
+            alt="logo"
+            loading="lazy"
+          />
         </a>
         <button
           class="navbar-toggler"
@@ -80,8 +84,8 @@
     <footer class="container-fluid">
       <div class="row">
         <p class="lead">
-            Copyright &copy;
-          <span currentYear></span> One-Stop Appliance Shop
+          Copyright &copy;
+          <span year></span> One-Stop Appliance Shop
         </p>
       </div>
     </footer>
@@ -95,8 +99,17 @@
     <!-- Custom's script -->
     <script>
       // year
-      document.querySelector("[currentYear]").textContent =
+      document.querySelector("[year]").textContent =
         new Date().getUTCFullYear();
+
+        // counter
+      window.onload = () => {
+        document.querySelector("[counter]").textContent = JSON.parse(
+          localStorage.getItem("checkout")
+        )
+          ? JSON.parse(localStorage.getItem("checkout")).length
+          : 0;
+      };
     </script>
   </body>
 </html>

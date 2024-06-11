@@ -1,3 +1,3 @@
 // year
-document.querySelector('[currentYear]').textContent =
+document.querySelector('[year]').textContent =
     new Date().getUTCFullYear()
