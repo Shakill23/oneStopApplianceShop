@@ -86,7 +86,15 @@
           />
         </div>
         <div class="col">
-          <button class="btn btn-success" type="button" sorting>Sorting</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" highSort>Highest</a></li>
+              <li><a class="dropdown-item" lowSort>Lowest</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="row gap-2 justify-content-between mx-2" ourStore></div>

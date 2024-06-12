@@ -4,7 +4,8 @@ document.querySelector('[year]').textContent =
 
     let container = document.querySelector('[ourStore]')
     let searchProduct = document.querySelector('[searchProduct]')
-    let sortingByAmount = document.querySelector('[sorting]')
+    let highSort = document.querySelector('[highSort]')
+    let lowSort = document.querySelector('[lowSort]')
     let products = JSON.parse(
         localStorage.getItem('products')
     )
@@ -47,30 +48,36 @@ document.querySelector('[year]').textContent =
             }
             let filteredProduct = products.filter(product => product.productName.toLowerCase().includes(searchProduct.value))
             displayProducts(filteredProduct)
-            if (!filteredProduct.length) throw new Error(`${searchProduct.value} product was not found`)
+            if (!filteredProduct.length) throw new Error(`"${searchProduct.value}" product was not found`)
         } catch (e) {
             container.textContent = e.message || 'Please try again later'
         }
     })
-    // Sorting by ascending and descending
-    let isToggle = false
-    sortingByAmount.addEventListener('click', () => {
-        try {
-            if (!products) throw new Error('Please try again later')
-            if (!isToggle) {
-                products.sort((a, b) => b.amount - a.amount)
-                sortingByAmount.textContent = 'Sorted by highest amount'
-                isToggle = true
-            } else {
-                products.sort((a, b) => a.amount - b.amount)
-                sortingByAmount.textContent = 'Sorted by lowest amount'
-                isToggle = false
-            }
-            displayProducts(products)
-        } catch (e) {
-            container.textContent = e.message || 'We are working on this issue'
-        }
-    })
+
+// Sorting by amount
+let isToggle = false;
+
+highSort.addEventListener('click', () => {
+    try {
+        if (!products) throw new Error('Please try again later');
+        products.sort((a, b) => b.amount - a.amount);
+        displayProducts(products);
+        isToggle = true;
+    } catch (e) {
+        container.textContent = e.message || 'We are working on this issue';
+    }
+});
+
+lowSort.addEventListener('click', () => {
+    try {
+        if (!products) throw new Error('Please try again later');
+        products.sort((a, b) => a.amount - b.amount);
+        displayProducts(products);
+        isToggle = false;
+    } catch (e) {
+        container.textContent = e.message || 'We are working on this issue';
+    }
+});
     // Add to cart
     function addToCart(product) {
         try {
