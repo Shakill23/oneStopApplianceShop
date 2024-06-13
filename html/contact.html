@@ -80,8 +80,42 @@
       <div class="row">
         <h2 class="display-2">Contact</h2>
       </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Contact Form</h3>
+          <form id="contactForm" class="mb-4">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h3>Contact Details</h3>
+          <p><strong>Phone:</strong> +1 234 567 8901</p>
+          <p><strong>Email:</strong> info@example.com</p>
+          <p><strong>Address:</strong> 123 Main St, City, Country</p>
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" class="btn btn-social btn-facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn btn-social btn-twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="btn btn-social btn-instagram"><i class="bi bi-instagram"></i></a>
+            <!-- Add more social icons as needed -->
+          </div>
+        </div>
+      </div>
     </main>
-    <footer class="container-fluid">
+    <footer class="container-fluid mt-4">
       <div class="row">
         <p class="lead">
           Copyright &copy;
@@ -89,27 +123,19 @@
         </p>
       </div>
     </footer>
-
+  
     <!-- Bootstrap's script -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Custom's script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom script -->
     <script>
-      // year
-      document.querySelector("[year]").textContent =
-        new Date().getUTCFullYear();
-
-        // counter
-      window.onload = () => {
-        document.querySelector("[counter]").textContent = JSON.parse(
-          localStorage.getItem("checkout")
-        )
-          ? JSON.parse(localStorage.getItem("checkout")).length
-          : 0;
-      };
+      // Year
+      document.querySelector("[year]").textContent = new Date().getUTCFullYear();
+  
+  
+      // Function to clear form
+      function clearForm() {
+        document.getElementById("contactForm").reset();
+      }
     </script>
   </body>
 </html>

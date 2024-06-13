@@ -41,6 +41,15 @@ body {
     }
 }
 
+/* contact */
+.social-icons {
+    margin-top: 20px;
+  }
+  
+  .btn-social {
+    margin-right: 10px;
+  }
+
 @media screen and (width < 768px) {
 
     :is(.col) {
