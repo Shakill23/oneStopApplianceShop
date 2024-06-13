@@ -75,13 +75,29 @@
     <main class="container-fluid mt-4">
       <h2 class="mb-4 text-center">Checkout</h2>
       <div class="checkout-list">
-          <div id="checkoutItems" class="list-group"></div>
+          <table class="table table-bordered table-hover">
+              <thead class="thead-dark">
+                  <tr>
+                      <th scope="col">Product Name</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Actions</th>
+                  </tr>
+              </thead>
+              <tbody id="checkoutItems"></tbody>
+          </table>
           <div class="d-flex justify-content-between align-items-center mt-3">
-              <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
-              <button class="btn btn-success" onclick="proceedToPayment()">Proceed to Payment</button>
+              <span id="totalAmount">Total: R0.00</span>
+              <div>
+                  <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+                  <button class="btn btn-success" onclick="proceedToPayment()">Proceed to Payment</button>
+              </div>
           </div>
       </div>
-    </main>
+  </main>
+  
     <footer class="container-fluid">
       <div class="row">
         <p class="lead">
