@@ -59,7 +59,7 @@
             <li class="nav-item">
               <a class="nav-link" href="./checkout.html"
                 >Checkout
-                <span class="badge rounded-pill bg-success" counter> 0 </span>
+                <!-- <span class="badge rounded-pill bg-success" counter> 0 </span> -->
               </a>
             </li>
             <li class="nav-item">
@@ -72,9 +72,14 @@
         </div>
       </div>
     </nav>
-    <main class="container-fluid">
-      <div class="row">
-        <h2 class="display-2">Checkout</h2>
+    <main class="container-fluid mt-4">
+      <h2 class="mb-4 text-center">Checkout</h2>
+      <div class="checkout-list">
+          <div id="checkoutItems" class="list-group"></div>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+              <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+              <button class="btn btn-success" onclick="proceedToPayment()">Proceed to Payment</button>
+          </div>
       </div>
     </main>
     <footer class="container-fluid">
