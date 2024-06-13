@@ -7,15 +7,22 @@ let highSort = document.querySelector('[highSort]');
 let lowSort = document.querySelector('[lowSort]');
 let spinner = document.querySelector('[spinner]');
 
-let products = JSON.parse(localStorage.getItem('products'));
-
-// items/products 
+// Initialize products and checkoutItems from local storage or default to empty arrays
+let products = JSON.parse(localStorage.getItem('products')) || [];
 let checkoutItems = JSON.parse(localStorage.getItem('checkout')) || [];
 
-function displayProducts(args) {
+function saveProductsToLocalStorage(productsArray) {
+    localStorage.setItem('products', JSON.stringify(productsArray));
+}
+
+function saveCheckoutItemsToLocalStorage(checkoutItemsArray) {
+    localStorage.setItem('checkout', JSON.stringify(checkoutItemsArray));
+}
+
+function displayProducts(productsArray) {
     container.innerHTML = "";
     try {
-        args.forEach(product => {
+        productsArray.forEach(product => {
             container.innerHTML += `
                 <div class="card">
                     <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
@@ -31,14 +38,14 @@ function displayProducts(args) {
                 </div>
             `;
         });
-
     } catch (e) {
         container.textContent = "Please try again later";
+        console.error("Error displaying products:", e);
     }
 }
 displayProducts(products);
 
-// keyup
+// Keyup search functionality
 searchProduct.addEventListener('keyup', () => {
     try {
         if (searchProduct.value.length < 1) {
@@ -46,12 +53,12 @@ searchProduct.addEventListener('keyup', () => {
             return;
         }
         let searchValue = searchProduct.value.toLowerCase();
-        let filteredProduct = products.filter(product => 
+        let filteredProducts = products.filter(product => 
             product.productName.toLowerCase().includes(searchValue) || 
             product.category.toLowerCase().includes(searchValue)
         );
-        displayProducts(filteredProduct);
-        if (!filteredProduct.length) throw new Error(`"${searchProduct.value}" product was not found`);
+        displayProducts(filteredProducts);
+        if (!filteredProducts.length) throw new Error(`"${searchProduct.value}" product was not found`);
     } catch (e) {
         container.textContent = e.message || 'Please try again later';
     }
@@ -82,7 +89,7 @@ lowSort.addEventListener('click', () => {
     }
 });
 
-// add to cart with quantity check
+// Add to cart with quantity check
 function addToCart(product) {
     try {
         const existingProductIndex = checkoutItems.findIndex(item => item.id === product.id);
@@ -92,21 +99,21 @@ function addToCart(product) {
             product.quantity = 1;
             checkoutItems.push(product);
         }
-
-        localStorage.setItem('checkout', JSON.stringify(checkoutItems));    
+        saveCheckoutItemsToLocalStorage(checkoutItems);
     } catch (e) {
         console.error("Unable to add to cart:", e);
         alert("Unable to add to cart");
     }
 }
 
+// Function to delete all data (for testing or cleanup)
 function deleteAllData() {
     spinner.classList.remove('d-none');
     setTimeout(() => {
-        localStorage.clear();
-        products = [];
-        checkoutItems = [];
-        displayProducts(products);
-        spinner.classList.add('d-none');
-    }, 2000); 
+        localStorage.clear(); // Clear all local storage
+        products = []; // Clear products array
+        checkoutItems = []; // Clear checkout items array
+        displayProducts(products); // Update displayed products (should be empty)
+        spinner.classList.add('d-none'); // Hide spinner
+    }, 2000);
 }

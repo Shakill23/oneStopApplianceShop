@@ -45,7 +45,6 @@ function displayCheckoutItems() {
             checkoutContainer.innerHTML = '<tr><td colspan="6" class="text-center">Your cart is empty.</td></tr>';
         }
 
-        // Update the total amount
         updateTotal();
 
     } catch (error) {
