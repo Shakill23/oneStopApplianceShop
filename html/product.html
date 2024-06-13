@@ -59,7 +59,7 @@
             <li class="nav-item">
               <a class="nav-link" href="./checkout.html"
                 >Checkout
-                <span class="badge rounded-pill bg-success" counter> 0 </span>
+                <!-- <span class="badge rounded-pill bg-success" counter> 0 </span> -->
               </a>
             </li>
             <li class="nav-item">
@@ -81,7 +81,7 @@
           <input
             class="form-control"
             type="text"
-            placeholder="Search product by name"
+            placeholder="Search product by name or category..."
             searchProduct
           />
         </div>
@@ -95,6 +95,12 @@
               <li><a class="dropdown-item" lowSort>Lowest</a></li>
             </ul>
           </div>
+        </div>
+      </div>
+ <button onclick="deleteAllData()">Delete All Data</button>
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" spinner>
+          <span class="visually-hidden">Loading...</span>
         </div>
       </div>
       <div class="row gap-2 justify-content-between mx-2" ourStore></div>
