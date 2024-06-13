@@ -84,7 +84,7 @@ lowSort.addEventListener('click', () => {
 
 // add to cart with quantity check
 function addToCart(product) {
-    
+    try {
         const existingProductIndex = checkoutItems.findIndex(item => item.id === product.id);
         if (existingProductIndex !== -1) {
             checkoutItems[existingProductIndex].quantity++;
@@ -93,13 +93,11 @@ function addToCart(product) {
             checkoutItems.push(product);
         }
 
-        localStorage.setItem('checkout', JSON.stringify(checkoutItems));
-        updateCounter(checkoutItems.length);
-}
-
-function updateCounter(value) {
-    localStorage.setItem('cartCounter', value); 
-    document.querySelector('[counter]').textContent = value || 0; 
+        localStorage.setItem('checkout', JSON.stringify(checkoutItems));    
+    } catch (e) {
+        console.error("Unable to add to cart:", e);
+        alert("Unable to add to cart");
+    }
 }
 
 function deleteAllData() {
@@ -111,8 +109,4 @@ function deleteAllData() {
         displayProducts(products);
         spinner.classList.add('d-none');
     }, 2000); 
-}
-
-window.onload = () => {
-    document.querySelector('[counter]').textContent = checkoutItems.length || 0;
 }

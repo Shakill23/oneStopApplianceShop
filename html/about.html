@@ -100,15 +100,6 @@
       // year
       document.querySelector("[year]").textContent =
         new Date().getUTCFullYear();
-
-        
-      window.onload = () => {
-        document.querySelector("[counter]").textContent = JSON.parse(
-          localStorage.getItem("checkout")
-        )
-          ? JSON.parse(localStorage.getItem("checkout")).length
-          : 0;
-      };
     </script>
   </body>
 </html>
