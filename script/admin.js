@@ -107,8 +107,19 @@ function deleteProduct(index) {
     displayProducts();
 }
 
-function sortProducts() {
-    products.sort((a, b) => a.productName.localeCompare(b.productName));
+function sortByName(option) {
+    switch (option) {
+        case 'az':
+            products.sort((a, b) => a.productName.localeCompare(b.productName));
+            break;
+        case 'za':
+            products.sort((a, b) => b.productName.localeCompare(a.productName));
+            break;
+        default:
+            // Default to sorting A-Z
+            products.sort((a, b) => a.productName.localeCompare(b.productName));
+            break;
+    }
     displayProducts();
 }
 

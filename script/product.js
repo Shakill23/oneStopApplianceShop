@@ -2,9 +2,7 @@
 document.querySelector('[year]').textContent = new Date().getUTCFullYear();
 
 let container = document.querySelector('[ourStore]');
-let searchProduct = document.querySelector('[searchProduct]');
-let highSort = document.querySelector('[highSort]');
-let lowSort = document.querySelector('[lowSort]');
+let searchProduct = document.getElementById('searchProduct'); // Changed to getElementById
 let spinner = document.querySelector('[spinner]');
 
 // Initialize products and checkoutItems from local storage or default to empty arrays
@@ -58,8 +56,8 @@ searchProduct.addEventListener('keyup', () => {
             return;
         }
         let searchValue = searchProduct.value.toLowerCase();
-        let filteredProducts = products.filter(product => 
-            product.productName.toLowerCase().includes(searchValue) || 
+        let filteredProducts = products.filter(product =>
+            product.productName.toLowerCase().includes(searchValue) ||
             product.category.toLowerCase().includes(searchValue)
         );
         displayProducts(filteredProducts);
@@ -69,26 +67,20 @@ searchProduct.addEventListener('keyup', () => {
     }
 });
 
-// Sorting by amount
-let isToggle = false;
-
-highSort.addEventListener('click', () => {
+// Sorting functionality using IDs
+document.getElementById('highSort').addEventListener('click', () => { // Changed to getElementById
     try {
-        if (!products) throw new Error('Please try again later');
         products.sort((a, b) => b.amount - a.amount);
         displayProducts(products);
-        isToggle = true;
     } catch (e) {
         container.textContent = e.message || 'We are working on this issue';
     }
 });
 
-lowSort.addEventListener('click', () => {
+document.getElementById('lowSort').addEventListener('click', () => { // Changed to getElementById
     try {
-        if (!products) throw new Error('Please try again later');
         products.sort((a, b) => a.amount - b.amount);
         displayProducts(products);
-        isToggle = false;
     } catch (e) {
         container.textContent = e.message || 'We are working on this issue';
     }

@@ -72,9 +72,11 @@
         </div>
       </div>
     </nav>
-    <main class="container-fluid">
+    <main class="container-fluid mt-4">
       <div class="row">
-          <h2 class="display-2">Products</h2>
+          <div class="col">
+              <h2 class="display-2">Products</h2>
+          </div>
       </div>
       <div class="row justify-content-between my-2 d-block d-md-flex p-2">
           <div class="col">
@@ -82,7 +84,7 @@
                   class="form-control"
                   type="text"
                   placeholder="Search product by name or category..."
-                  searchProduct
+                  id="searchProduct"
               />
           </div>
           <div class="col">
@@ -91,8 +93,8 @@
                       Sort
                   </button>
                   <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" highSort>Highest</a></li>
-                      <li><a class="dropdown-item" lowSort>Lowest</a></li>
+                      <li><a class="dropdown-item" id="highSort">Highest</a></li> <!-- Changed to id -->
+                      <li><a class="dropdown-item" id="lowSort">Lowest</a></li> <!-- Changed to id -->
                   </ul>
               </div>
           </div>
@@ -104,25 +106,7 @@
       </div>
       <div class="row gap-2 justify-content-between mx-2" ourStore></div>
   </main>  
-  
-  <footer class="container-fluid">
-      <div class="row">
-          <p class="lead">
-              Copyright &copy;
-              <span year></span> One-Stop Appliance Shop
-          </p>
-      </div>
-  </footer>
-  
-  <!-- Bootstrap's script -->
-  <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-  ></script>
-  <!-- Custom's script -->
-  <script src="../script/product.js"></script>
-  
+    
   <footer class="container-fluid">
       <div class="row">
           <p class="lead">
