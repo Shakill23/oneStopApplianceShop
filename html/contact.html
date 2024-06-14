@@ -29,8 +29,8 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
         <a class="navbar-brand" href="../index.html">
           <img
             src="https://shakill23.github.io/allImages/images/sdLogo.png"
@@ -61,80 +61,144 @@
               <a class="nav-link" href="./product.html">Store</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./checkout.html"
-                >Checkout
-                <!-- <span class="badge rounded-pill bg-success" counter> 0 </span> -->
-              </a>
+              <a class="nav-link" href="./checkout.html">Checkout</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./admin.html">Admin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
+              <a class="nav-link active" href="./contact.html">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <main class="container-fluid">
+
+    <main class="container mt-4">
       <div class="row">
-        <h2 class="display-2">Contact</h2>
+        <div class="col-12">
+          <h2 class="display-2 text-center">Contact</h2>
+        </div>
       </div>
-      <div class="row">
+      <div class="row gx-4">
         <div class="col-md-6">
-          <h3>Contact Form</h3>
-          <form id="contactForm" class="mb-4">
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" name="name" required>
+          <div class="card shadow">
+            <div class="card-body">
+              <h3 class="card-title">Contact Form</h3>
+              <form
+                id="contactForm"
+                action="https://formspree.io/f/mwkggroj"
+                method="POST"
+              >
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="clearForm()"
+                  >
+                  <i class="bi bi-x-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                  </svg></i>
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
-          </form>
+          </div>
         </div>
         <div class="col-md-6">
-          <h3>Contact Details</h3>
-          <p><strong>Phone:</strong> +1 234 567 8901</p>
-          <p><strong>Email:</strong> info@example.com</p>
-          <p><strong>Address:</strong> 123 Main St, City, Country</p>
-          <h3>Follow Us</h3>
-          <div class="social-icons">
-            <a href="#" class="btn btn-social btn-facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="btn btn-social btn-twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="btn btn-social btn-instagram"><i class="bi bi-instagram"></i></a>
-            <!-- Add more social icons as needed -->
+          <div class="card shadow">
+            <div class="card-body">
+              <h3 class="card-title">Contact Details</h3>
+              <p><strong>Phone:</strong> +27 60 966 8901</p>
+              <p><strong>Email:</strong> shakeeldvd23@gmail.com</p>
+              <p><strong>Address:</strong> 20 Marlin Crescent Strandfontein</p>
+              <h3>Follow Me</h3>
+              <div class="social-icons">
+                  <a href="#" class="btn btn-social btn-twitter"><i class="bi bi-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                  </svg>shakeel_Davids23</i></a>
+                  <a href="#" class="btn btn-social btn-instagram"><i class="bi bi-instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg>ShakeelD23</i></a>
+                  <i class="bi bi-whatsapp"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                  </svg>+27 60 966 8901</i>
+      
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
     <footer class="container-fluid mt-4">
       <div class="row">
-        <p class="lead">
-          Copyright &copy;
-          <span year></span> One-Stop Appliance Shop
-        </p>
+        <div class="col-12 text-center">
+          <p class="lead">
+            Copyright &copy;
+            <span year></span> One-Stop Appliance Shop
+          </p>
+        </div>
       </div>
     </footer>
-  
+
     <!-- Bootstrap's script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <!-- Custom script -->
     <script>
       // Year
-      document.querySelector("[year]").textContent = new Date().getUTCFullYear();
-  
-  
+      document.querySelector("[year]").textContent =
+        new Date().getUTCFullYear();
+
       // Function to clear form
       function clearForm() {
         document.getElementById("contactForm").reset();
+      }
+
+      // active class to nav link
+      const currentLocation = location.href;
+      const menuItem = document.querySelectorAll(".nav-link");
+      const menuLength = menuItem.length;
+
+      for (let i = 0; i < menuLength; i++) {
+        if (menuItem[i].href === currentLocation) {
+          menuItem[i].classList.add("is-active");
+        }
       }
     </script>
   </body>

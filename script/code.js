@@ -1,6 +1,6 @@
+// year
 document.querySelector('[year]').textContent = new Date().getUTCFullYear();
 
-// Creating products and storing it in the local storage
 let wrapper = document.querySelector('[recentProducts]');
 let spinner = document.querySelector('[spinner]');
 let products = JSON.parse(localStorage.getItem('products')) ? JSON.parse(localStorage.getItem('products')) : localStorage.setItem('products', JSON.stringify([
@@ -71,7 +71,7 @@ let products = JSON.parse(localStorage.getItem('products')) ? JSON.parse(localSt
 ]));
 
 function recentProducts() {
-    spinner.classList.remove('d-none'); // Show spinner while loading recent products
+    spinner.classList.remove('d-none');
     setTimeout(() => {
         try {
             let arrSize = products.length;
@@ -93,9 +93,12 @@ function recentProducts() {
                 location.reload();
             }, 2000);
         } finally {
-            spinner.classList.add('d-none'); // Hide spinner once the products are displayed
+            spinner.classList.add('d-none'); 
         }
-    }, 25); // Add a delay of 500ms to ensure the spinner is visible
+    }, 25); 
 }
 
 recentProducts();
+
+
+ 

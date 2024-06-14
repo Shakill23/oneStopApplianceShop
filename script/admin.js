@@ -1,11 +1,10 @@
-// Display the current year in the footer
+// year
 document.querySelector('[year]').textContent = new Date().getUTCFullYear();
 
 let products = JSON.parse(localStorage.getItem('products')) || [];
 let editIndex = null;
 let spinner = document.querySelector('[spinner]');
 
-// Constructor function for Product
 function Product(productName, img_url, category, amount) {
     this.productName = productName;
     this.img_url = img_url;
@@ -16,7 +15,7 @@ function Product(productName, img_url, category, amount) {
 function displayProducts() {
     const productTable = document.getElementById('productTable');
     productTable.innerHTML = '';
-    spinner.classList.remove('d-none'); // Show spinner while loading products
+    spinner.classList.remove('d-none'); 
 
     setTimeout(() => {
         products.forEach((product, index) => {
@@ -27,15 +26,15 @@ function displayProducts() {
                     <td>${product.category}</td>
                     <td>R${product.amount.toFixed(2)}</td>
                     <td>
-                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editProductModal" onclick="editProduct(${index})">Edit</button>
+                        <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#editProductModal" onclick="editProduct(${index})">Edit</button>
                         <button class="btn btn-danger btn-sm" onclick="deleteProduct(${index})">Delete</button>
                     </td>
                 </tr>
             `;
             productTable.insertAdjacentHTML('beforeend', productRow);
         });
-        spinner.classList.add('d-none'); // Hide spinner once the products are displayed
-    }, 25); // Add a delay of 25ms to ensure the spinner is visible
+        spinner.classList.add('d-none'); 
+    }, 25);
 }
 
 function validateImageURL(url) {
@@ -116,7 +115,6 @@ function sortByName(option) {
             products.sort((a, b) => b.productName.localeCompare(a.productName));
             break;
         default:
-            // Default to sorting A-Z
             products.sort((a, b) => a.productName.localeCompare(b.productName));
             break;
     }
@@ -127,3 +125,14 @@ document.getElementById('addProductForm').addEventListener('submit', addProduct)
 document.getElementById('editProductForm').addEventListener('submit', saveEditProduct);
 
 window.onload = displayProducts;
+
+ // active class to nav link
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll('.nav-link');
+const menuLength = menuItem.length;
+
+for (let i = 0; i < menuLength; i++) {
+    if (menuItem[i].href === currentLocation) {
+        menuItem[i].classList.add('is-active');
+    }
+}

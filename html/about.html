@@ -29,7 +29,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
           <img
@@ -76,11 +76,15 @@
         </div>
       </div>
     </nav>
-    <main class="container-fluid">
+    <main class="container-fluid mt-4">
       <div class="row">
-        <h2 class="display-2">About</h2>
+          <h2 class="display-2">About</h2>
+          <p>Welcome to One-Stop Appliance Shop, your go-to destination for all your appliance needs! At One-Stop Appliance Shop, we are committed to providing top-quality appliances and excellent customer service. Whether you're looking to upgrade your kitchen with the latest appliances or seeking reliable home electronics, we've got you covered.</p>
+          <p>Our mission is to make shopping for appliances enjoyable and stress-free. With a wide selection of products ranging from refrigerators and washing machines to TVs and audio systems, we strive to cater to every customer's unique needs and preferences.</p>
+          <p>At One-Stop Appliance Shop, we prioritize quality and affordability, ensuring that our products meet the highest standards while remaining accessible to everyone. Our team of knowledgeable professionals is here to assist you every step of the way, from choosing the right appliance to providing after-sales support.</p>
+          <p>Explore our store online or visit our physical location to experience the convenience and reliability that One-Stop Appliance Shop offers. Join countless satisfied customers who have made us their trusted partner for all things appliances. We look forward to serving you!</p>
       </div>
-    </main>
+  </main>
     <footer class="container-fluid">
       <div class="row">
         <p class="lead">
@@ -100,6 +104,17 @@
       // year
       document.querySelector("[year]").textContent =
         new Date().getUTCFullYear();
+
+         // active class to nav link
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll('.nav-link');
+const menuLength = menuItem.length;
+
+for (let i = 0; i < menuLength; i++) {
+    if (menuItem[i].href === currentLocation) {
+        menuItem[i].classList.add('is-active');
+    }
+}
     </script>
   </body>
 </html>
