@@ -21,29 +21,32 @@ function saveCheckoutItemsToLocalStorage(checkoutItemsArray) {
 
 function displayProducts(productsArray) {
     container.innerHTML = "";
-    try {
-        productsArray.forEach(product => {
-            container.innerHTML += `
-                <div class="card">
-                    <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
-                    <div class="card-body">
-                        <h5 class="card-title">${product.productName}</h5>
-                        <p class="card-text">${product.category}</p>
-                        <p class="card-text">
-                            <span class="text-success fw-bold">Amount</span>
-                            R${product.amount}
-                        </p>
-                        <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
+    spinner.classList.remove('d-none'); // Show spinner while loading products
+    setTimeout(() => {
+        try {
+            productsArray.forEach(product => {
+                container.innerHTML += `
+                    <div class="card">
+                        <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
+                        <div class="card-body">
+                            <h5 class="card-title">${product.productName}</h5>
+                            <p class="card-text">${product.category}</p>
+                            <p class="card-text">
+                                <span class="text-success fw-bold">Amount</span>
+                                R${product.amount}
+                            </p>
+                            <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
+                        </div>
                     </div>
-                </div>
-            `;
-        });
-    } catch (e) {
-        container.textContent = "Please try again later";
-        console.error("Error displaying products:", e);
-    } finally {
-        spinner.classList.add('d-none'); // Hide spinner once the products are displayed
-    }
+                `;
+            });
+        } catch (e) {
+            container.textContent = "Please try again later";
+            console.error("Error displaying products:", e);
+        } finally {
+            spinner.classList.add('d-none'); // Hide spinner once the products are displayed
+        }
+    }, 500); // Add a delay of 500ms to ensure the spinner is visible
 }
 displayProducts(products);
 
