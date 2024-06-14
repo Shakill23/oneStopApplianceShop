@@ -1,4 +1,4 @@
-// year
+// Display the current year in the footer
 document.querySelector('[year]').textContent = new Date().getUTCFullYear();
 
 let container = document.querySelector('[ourStore]');
@@ -41,6 +41,8 @@ function displayProducts(productsArray) {
     } catch (e) {
         container.textContent = "Please try again later";
         console.error("Error displaying products:", e);
+    } finally {
+        spinner.classList.add('d-none'); // Hide spinner once the products are displayed
     }
 }
 displayProducts(products);
@@ -108,12 +110,11 @@ function addToCart(product) {
 
 // Function to delete all data (for testing or cleanup)
 function deleteAllData() {
-    spinner.classList.remove('d-none');
+    spinner.classList.remove('d-none'); // Show spinner
     setTimeout(() => {
         localStorage.clear(); // Clear all local storage
         products = []; // Clear products array
         checkoutItems = []; // Clear checkout items array
         displayProducts(products); // Update displayed products (should be empty)
-        spinner.classList.add('d-none'); // Hide spinner
     }, 2000);
 }
